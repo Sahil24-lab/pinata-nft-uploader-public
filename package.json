@@ -4,7 +4,6 @@
   "description": "Node.js + TS project for uploading files to Pinata.",
   "main": "dist/index.js",
   "scripts": {
-    "//": "rest of code here",
     "build": "tsc",
     "start": "node dist/index.js",
     "upload": "ts-node src/scripts/uploadFolder.ts"
@@ -13,14 +12,18 @@
     "axios": "^1.3.4",
     "cli-progress": "^3.12.0",
     "dotenv": "^16.0.3",
+    "express": "^4.21.2",
     "form-data": "^4.0.0",
     "form-data-encoder": "^4.0.2",
     "formdata-node": "^6.0.3",
+    "multer": "^1.4.5-lts.2",
     "progress-stream": "^2.0.0",
     "undici": "^7.5.0"
   },
   "devDependencies": {
     "@types/cli-progress": "^3.11.6",
+    "@types/express": "^5.0.1",
+    "@types/multer": "^1.4.12",
     "@types/progress-stream": "^2.0.5",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.5"
