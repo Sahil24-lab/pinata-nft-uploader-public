@@ -1,7 +1,7 @@
 import { uploadFolderToPinata } from "../services/pinata.service";
 import { logger } from "../utils/logger";
 
-(async () => {
+export async function runUpload() {
   try {
     await uploadFolderToPinata();
     logger.log("✅ Done.");
@@ -9,4 +9,4 @@ import { logger } from "../utils/logger";
     logger.error("❌ Error uploading folder:", err?.message || err);
     process.exit(1);
   }
-})();
+}

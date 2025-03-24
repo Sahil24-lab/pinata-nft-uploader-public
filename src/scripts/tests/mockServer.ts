@@ -6,14 +6,14 @@ const app = express();
 const upload = multer({ dest: "mock_uploads/" });
 
 app.post("/upload", upload.any(), (req, res) => {
-    logger.log("📦 Received files:", req.files?.length);
+  logger.log("📦 Received files:", req.files?.length);
   setTimeout(() => {
     res.json({
       IpfsHash: "QmFakeHashForTestingOnly1234567890",
     });
-  }, 5000); // Simulate slow Pinata response
+  }, 5000);
 });
 
 app.listen(4000, () => {
-    logger.log("🚀 Mock Pinata server listening at http://localhost:4000");
+  logger.log("🚀 Mock Pinata server listening at http://localhost:4000");
 });
