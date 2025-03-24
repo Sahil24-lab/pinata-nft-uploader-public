@@ -1,40 +1,81 @@
-# Pinata Upload Project
+# 📦 Pinata Upload Project
+A TypeScript-based uploader for pushing local image folders to Pinata using their API.
 
-A TypeScript-based uploader for pushing local image folders to [Pinata](https://www.pinata.cloud/) using their API.
-
-## Quick Start
-
-1. Clone the repo.
-2. Copy `.env.example` to `.env`.
-3. Fill in your Pinata credentials and settings in `.env`.
-4. Run `npm install`.
-5. Run `npm run upload`.
-
-## Environment Modes
-
-- `NEXT_PUBLIC_NODE_ENV=local`: Runs the mock server and enables verbose logging.
-- `NEXT_PUBLIC_NODE_ENV=development`: Enables verbose logging only.
-- `NEXT_PUBLIC_NODE_ENV=production`: Disables mock server and logs.
-
-## Folder Structure
-
-- `src/config`: Environment setup.
-- `src/scripts`: Entrypoint and execution scripts.
-- `src/services`: Upload logic and Pinata service.
-- `src/utils`: File and logging utilities.
-- `input_files/`: Place your images here to upload.
-
-## Commands
-
-| Command          | Description                                   |
-| ---------------- | --------------------------------------------- |
-| `npm run upload` | Uploads images from `input_files/` to Pinata. |
-| `npm run dev`    | Runs `index.ts` with `tsx` in local mode.     |
-| `npm run build`  | Compiles the TypeScript project to `dist/`.   |
-| `npm start`      | Executes the compiled project with Node.js.   |
-
-## Mock Server
-
-When `NEXT_PUBLIC_NODE_ENV=local`, a mock Pinata server will auto-start on port `4000` to simulate uploads.
+[![Node.js](https://img.shields.io/badge/Node.js-18.x-green?logo=node.js)]()
+[![TypeScript](https://img.shields.io/badge/TypeScript-4.x-blue?logo=typescript)]()
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]()
+[![Build](https://img.shields.io/badge/build-passing-brightgreen)]()
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blue)]()
 
 ---
+
+## 🚀 Quick Start
+
+1. Clone the repo  
+   `git clone https://github.com/your-username/pinata-upload-project.git`
+
+2. Set up environment  
+   `cp .env.example .env`
+
+3. Fill in your Pinata API credentials
+
+4. Install dependencies  
+   `npm install`
+
+5. Upload files  
+   `npm run upload`
+
+---
+
+## 🌐 Environment Modes
+
+| Environment | Behavior |
+|------------|----------|
+| `local` (`NEXT_PUBLIC_NODE_ENV=local`) | Starts mock server + verbose logs |
+| `development` (`NEXT_PUBLIC_NODE_ENV=development`) | Verbose logs only |
+| `production` (`NEXT_PUBLIC_NODE_ENV=production`) | Production mode, no mock server/logs |
+
+---
+
+## 📁 Folder Structure
+
+src/
+  ├── config/       # Environment setup
+  ├── scripts/      # Entrypoint and main execution
+  ├── services/     # Upload logic and Pinata API
+  └── utils/        # File handling and logger helpers
+input_files/        # Place your local files here
+
+---
+
+## 📦 Available Commands
+
+| Command | Description |
+|---------|-------------|
+| `npm run upload` | Uploads files from `input_files/` to Pinata |
+| `npm run dev` | Runs with `tsx` in `local` mode |
+| `npm run build` | Compiles TypeScript to `dist/` |
+| `npm start` | Executes built app using Node.js |
+
+---
+
+## 🧪 Mock Server
+
+When in `local` mode, a mock Pinata server starts automatically on http://localhost:4000, simulating real upload responses.
+
+---
+
+## ✅ To-Do / Contributions
+
+- [ ] Add CLI support (e.g. `--folder`, `--log-level`)
+- [ ] Progress tracking UI / CLI
+- [ ] Upload verification with public gateways
+- [ ] Retry logic for failed uploads
+
+Pull requests welcome. Please follow the CONTRIBUTING.md guide if submitting changes.
+
+---
+
+## 📝 License
+
+Licensed under the MIT License.
