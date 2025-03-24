@@ -38,5 +38,3 @@ A TypeScript-based uploader for pushing local image folders to [Pinata](https://
 When `NEXT_PUBLIC_NODE_ENV=local`, a mock Pinata server will auto-start on port `4000` to simulate uploads.
 
 ---
-
-Let me know if you want to add support for CLI args, dynamic folder names, or logging levels.
